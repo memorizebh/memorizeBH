@@ -274,15 +274,15 @@ nav.show div.icon-close {
   height: 100%;
   width: 100%;
   background: var(--base-color-second);
-  position: absolute;
+  position: relative;
   top: -16.8%;
-  left: 16.7%;
-  z-index: 0;
+  left: 8.7%;
+  z-index: -1;
 }
 
 #home .image img {
   position: relative;
-  right: 2.93rem;
+  right: 1.8rem;
 }
 
 #home .image img,
@@ -322,14 +322,14 @@ nav.show div.icon-close {
   height: 100%;
   width: 100%;
   background: var(--base-color-second);
-  position: absolute;
+  position: relative;
   top: -8.3%;
   left: -33%;
   z-index: 0;
 }
 
 #team .image img {
-  position: relative;
+  position: absolute;
 }
 
 #team .image img,
@@ -652,6 +652,13 @@ footer .social a:hover {
   }
 }
 
+/* large devices: 1200 > */
+@media (min-width: 1200px) {
+  :root {
+    --title-font-size: 2.25rem;
+    --subtitle-font-size: 1.125rem;
+  }
+}
 /* large devices: 1023 > */
 @media (min-width: 1023px) {
   :root {
@@ -670,6 +677,145 @@ footer .social a:hover {
 
 /* medium devices: 767 > */
 @media (min-width: 767px) {
+  :root {
+    --title-font-size: 2.25rem;
+    --subtitle-font-size: 1.125rem;
+  }
+}
+
+/* medium devices: 615 > */
+@media (min-width: 615px) {
+  :root {
+    --title-font-size: 2.25rem;
+    --subtitle-font-size: 1.125rem;
+  }
+}
+
+/* medium devices: 480 > */
+@media (min-width: 480px) {
+
+  /* reusable classes */
+  .container {
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .section {
+    padding: 5rem 0;
+  }
+
+  .section header,
+  #testimonials header {
+    max-width: 16rem;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .button {
+    height: 3.125rem;
+  }
+
+  /* navigation */
+  nav .menu {
+    opacity: 1;
+    visibility: hidden;
+    top: 0;
+  }
+
+  nav .menu ul {
+    display: box;
+    gap: 1rem;
+  }
+
+  nav .menu ul li a.title {
+    font: 400 1rem var(--body-font);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  nav .menu ul li a.title.active {
+    font-weight: bold;
+    -webkit-font-smoothing: auto;
+  }
+
+  nav .icon-menu {
+    display: flex;
+  }
+
+  /* layout */
+  main {
+    margin-top: var(--header-height);
+  }
+
+  /* home */
+  #home .container {
+    grid-auto-flow: row;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+
+  #home .image {
+    order: 1;
+  }
+
+  #home .text {
+    order: 0;
+    max-width: 16rem;
+    text-align: left;
+  }
+
+  /* team */
+  #Team .container {
+    grid-auto-flow: blockquote;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+
+  /* do it */
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .card {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  /* testimonials */
+  #testimonials .container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* contact */
+  #contact .container {
+    grid-auto-flow: blockquote;
+    align-items: center;
+  }
+
+  #contact .text {
+    max-width: 25rem;
+  }
+
+  /* footer */
+  footer.section {
+    padding: 3.75rem 0;
+  }
+
+  footer .container {
+    grid-auto-flow: blockquote;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  footer .logo {
+    font-size: 2.25rem;
+  }
+}
+
+/* large devices: 1200 > */
+@media (min-width: 1200px) {
   :root {
     --title-font-size: 2.25rem;
     --subtitle-font-size: 1.125rem;
